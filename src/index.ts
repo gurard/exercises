@@ -1,3 +1,43 @@
+let main = (): void => {
+  // Example 1
+  // Input: [3, 4, 2, 1, 6, 6, 4, 4]
+  // Output:
+  //  *
+  //  *  *
+  // *****
+  // 34216
+
+  console.log('Example 1');
+  let example: Array<number> = [3, 4, 2, 1, 6, 6, 4, 4];
+  printHistogram(example);
+
+  // Example 2
+  // Input: [8, 8, 8, 8, 6, 1, 1, 8, 1, 4]
+  // Output:
+  // *
+  // *
+  // * *
+  // * *
+  // ****
+  // 8614
+
+  console.log('');
+  console.log('Example 2');
+  example = [8, 8, 8, 8, 6, 1, 1, 8, 1, 4];
+  printHistogram(example);
+
+  // Example 3
+  // Input: [1, 3, 3]
+  // Output:
+  //  *
+  // **
+  // 13
+  console.log('');
+  console.log('Example 3');
+  example = [1, 3, 3];
+  printHistogram(example);
+};
+
 let printHistogram = (numbers: Array<number>): void => {
   let valueMap: Object = {};
   let uniqueKeys: Array<number> = new Array<number>();
@@ -51,40 +91,4 @@ let printHistogram = (numbers: Array<number>): void => {
   }
 };
 
-// Example 1
-// Input: [3, 4, 2, 1, 6, 6, 4, 4]
-// Output:
-//  *
-//  *  *
-// *****
-// 34216
-
-console.log('Example 1');
-let example: Array<number> = [3, 4, 2, 1, 6, 6, 4, 4];
-printHistogram(example);
-
-// Example 2
-// Input: [8, 8, 8, 8, 6, 1, 1, 8, 1, 4]
-// Output:
-// *
-// *
-// * *
-// * *
-// ****
-// 8614
-
-console.log('');
-console.log('Example 2');
-example = [8, 8, 8, 8, 6, 1, 1, 8, 1, 4];
-printHistogram(example);
-
-// Example 3
-// Input: [1, 3, 3]
-// Output:
-//  *
-// **
-// 13
-console.log('');
-console.log('Example 3');
-example = [1, 3, 3];
-printHistogram(example);
+main();
